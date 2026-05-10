@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="login-container">
+    <mat-card class="login-card">
+        <mat-card-header>
+            <mat-card-title>כניסה לסטודיו</mat-card-title>
+        </mat-card-header>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <mat-card-content>
+
+                <mat-form-field appearance="outline" class="full-width" dir="rtl">
+                    <mat-label>שם משתמש</mat-label>
+                    <input matInput formControlName="username" type="text">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width" dir="rtl">
+                    <mat-label>סיסמה</mat-label>
+                    <input matInput formControlName="password" type="password">
+                </mat-form-field>
+
+                <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
+            </mat-card-content>
+
+            <mat-card-actions>
+
+                <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                    כניסה
+                </button>
+            </mat-card-actions>
+
+        </form>
+    </mat-card>
+</div>
