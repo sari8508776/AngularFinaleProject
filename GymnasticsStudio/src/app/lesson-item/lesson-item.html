@@ -1,0 +1,15 @@
+<mat-card class="lesson-card" [ngClass]="{ 'started-style': isStarted() }">
+    <div class="started-badge" *ngIf="isStarted()">שיעור זה כבר החל</div>
+
+    <mat-card-header>
+        <mat-card-title>{{ lesson.name }}</mat-card-title>
+        <mat-card-subtitle>מורה: {{ lesson.teacher }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <p><strong>מספר מפגשים:</strong> {{ lesson.sessions }}</p>
+        <p><strong>מחיר:</strong> ₪{{ lesson.price }}</p>
+        <p><strong>מועד:</strong> {{ lesson.day }} בשעה {{ lesson.hour }}</p>
+        <p><strong>תאריך התחלה:</strong> {{ lesson.startDate | date:'dd/MM/yyyy' }}</p>
+    </mat-card-content>
+</mat-card>

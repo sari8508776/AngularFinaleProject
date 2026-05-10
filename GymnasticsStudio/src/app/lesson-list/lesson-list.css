@@ -1,0 +1,12 @@
+.lessons-grid {
+  display: flex;
+  flex-wrap: wrap; /* מאפשר לכרטיסיות לרדת שורה כשנגמר המקום */
+  gap: 20px;       /* רווח בין הכרטיסיות */
+  justify-content: center;
+  padding: 20px;
+}
+
+.lesson-card {
+  width: 300px;    /* רוחב קבוע לכל כרטיסייה */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

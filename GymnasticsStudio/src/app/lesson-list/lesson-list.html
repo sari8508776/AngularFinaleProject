@@ -1,1 +1,8 @@
-<p>lesson-list works!</p>
+<div class="lessons-container">
+    <h1>השיעורים בסטודיו שלנו</h1>
+
+    <div class="lessons-grid">
+        <app-lesson-item *ngFor="let item of allLessons" [lesson]="item">
+        </app-lesson-item>
+    </div>
+</div>
