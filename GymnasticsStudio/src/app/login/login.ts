@@ -33,7 +33,7 @@ onLogin() {
       if (role === 'teacher') {
         this.router.navigate(['/lessons']);
       } else if (role === 'secretary') {
-        this.router.navigate(['/lessons']);
+        this.router.navigate(['/sign-up']);
       } else {
         this.errorMessage = 'שם משתמש או סיסמה שגויים';
       }

@@ -10,7 +10,7 @@ export class LessonService {
       name: 'פילאטיס מכשירים',
       teacher: 'שרה כהן',
       sessions: 12,
-      startDate: new Date('2024-06-01'),
+      startDate: new Date('2026-06-01'),
       price: 600,
       day: 'ב',
       hour: '17:00'
@@ -28,7 +28,7 @@ export class LessonService {
       name: 'יוגה ויניאסה',
       teacher: 'נועה דיין',
       sessions: 10,
-      startDate: new Date('2024-06-15'),
+      startDate: new Date('2026-06-15'),
       price: 550,
       day: 'א',
       hour: '08:30'

@@ -1,0 +1,70 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+::ng-deep .details-btn {
+  background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+  color: white;
+  border: none;
+  border-radius: 20px; /* כפתור עגול ויפה */
+  padding: 5px 15px;
+  transition: transform 0.2s;
+}
+
+::ng-deep .details-btn:hover {
+  transform: scale(1.05); /* אפקט קטן במעבר עכבר */
+  background: #303f9f;
+}
+/* רקע כללי לדף */
+.page-container {
+    padding: 20px;
+    background-color: #f4f7f9;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+/* כותרת מעוצבת */
+.main-title {
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3f51b5;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* הקונטיינר של הטבלה - הופך אותה ל"צפה" */
+.grid-wrapper {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* העיצוב של הכפתור "הצג פרטים" שהוספנו קודם */
+::ng-deep .details-btn {
+    background: linear-gradient(45deg, #3f51b5, #5c6bc0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 4px 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+::ng-deep .details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+::ng-deep .expensive-row {
+    background-color: #ffebee !important; /* אדום בהיר מאוד */
+    border-right: 5px solid #d32f2f !important; /* קו הדגשה בצד */
+}

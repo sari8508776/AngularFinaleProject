@@ -1,0 +1,6 @@
+.page-container {
+    background-image: url('/image.png');
+    background-size: cover;      /* גורם לתמונה למלא את כל המסך */
+    background-position: center; /* מרכז את התמונה */
+    background-attachment: fixed; /* התמונה לא תזוז כשגוללים (אופציונלי) */
+}

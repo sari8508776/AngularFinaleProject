@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global background variables and reusable classes */
+:root {
+    /* prioritize public/ root image (as your screenshot shows it in public/), then assets/ as fallback */
+    --app-bg-image: url('/image.png'), url('/assets/image.png');
+    --app-bg-overlay: rgba(0, 0, 0, 0.35);
+}
+
+/* Reusable full-viewport background class */
+.app-background {
+    position: fixed;
+    inset: 0;
+    background-image: var(--app-bg-image), url('/image.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    /* keep background at base layer */
+}
+
+/* overlay element for contrast */
+.app-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--app-bg-overlay), var(--app-bg-overlay));
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Top centered page header/title used on login page */
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    pointer-events: none;
+    /* header not interactive */
+}
+
+.page-title {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 20px;
+    pointer-events: auto;
+}
+
+/* side buttons used across pages for quick navigation */
+.side-buttons {
+    position: fixed;
+    right: 18px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 50;
+}
+
+.side-btn {
+    display: inline-block;
+    padding: 10px 14px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.18);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.side-btn:hover {
+    transform: translateX(-4px);
+    box-shadow: 0 10px 26px rgba(25, 118, 210, 0.22);
+}
+
+@media (max-width: 800px) {
+    .side-buttons {
+        right: 8px;
+        top: auto;
+        bottom: 18px;
+        flex-direction: row;
+    }
+
+    .side-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}

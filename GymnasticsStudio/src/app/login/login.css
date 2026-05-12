@@ -4,6 +4,16 @@
 body {
     direction: rtl;
 }
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Use the shared .app-background defined in src/styles.css */
+.app-background {
+    display: block;
+}
 
 /* Container centers the card both vertically and horizontally */
 .login-container {
@@ -11,10 +21,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: transparent;
+    /* let the global background show */
     direction: rtl;
     /* יישור לימין עבור העברית */
     padding: 16px;
+    position: relative;
+    z-index: 10;
+    /* ensure the card sits above the background */
 }
 
 .login-card {
@@ -24,6 +38,7 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .full-width {
